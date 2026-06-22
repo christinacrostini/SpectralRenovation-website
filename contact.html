@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule a Consultation | Spectral Renovation &amp; Design</title>
+<meta name="description" content="Tell us about your renovation. The owner reviews every consultation request and replies within one business day.">
+<link rel="canonical" href="https://spectralrenovationdesign.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spectral Renovation &amp; Design">
+<meta property="og:title" content="Schedule a Consultation | Spectral Renovation &amp; Design">
+<meta property="og:description" content="Tell us about your renovation. The owner reviews every consultation request and replies within one business day.">
+<meta property="og:url" content="https://spectralrenovationdesign.com/contact">
+<meta property="og:image" content="https://spectralrenovationdesign.com/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body class="subpage">
+<header class="site-header" id="siteHeader">
+  <a href="/" class="brand" aria-label="Spectral Renovation and Design home">
+    <img class="brand-logo" alt="Spectral Renovation and Design" src="/assets/images/logo.png">
+  </a>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="/services" class="nav__link">Services</a>
+    <a href="/portfolio" class="nav__link">Work</a>
+    <a href="/process" class="nav__link">Process</a>
+    <a href="/about" class="nav__link">About</a>
+    <a href="/contact" class="nav__link">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:18px">
+    <a href="/contact" class="header-link">Start a project</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span class="nav-toggle__bar"></span></button>
+  </div>
+</header>
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__kicker">Schedule a consultation</div>
+      <h1 class="page-hero__title">Tell us about the renovation.</h1>
+      <p class="page-hero__sub">A short, structured form so we have what we need to review fit. The owner reads every submission and replies within one business day.</p>
+    </div>
+  </section>
+  <section class="bg-cream">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form">
+          <div class="form-progress" id="formProgress" aria-hidden="true">
+            <span class="form-progress__item current" data-s="1">Contact</span>
+            <span class="form-progress__item" data-s="2">Location</span>
+            <span class="form-progress__item" data-s="3">Project</span>
+            <span class="form-progress__item" data-s="4">Details</span>
+            <span class="form-progress__item" data-s="5">Budget</span>
+            <span class="form-progress__item" data-s="6">Review</span>
+          </div>
+          <form id="consultForm" novalidate>
+            <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <div class="form-step active" data-step="1">
+              <h2 class="form-step__title">Your details</h2>
+              <p class="form-step__sub">How should we reach you to follow up?</p>
+              <div class="field field--row"><div><label for="fn">First name</label><input id="fn" name="firstName" type="text" required></div><div><label for="ln">Last name</label><input id="ln" name="lastName" type="text" required></div></div>
+              <div class="field"><label for="em">Email</label><input id="em" name="email" type="email" required></div>
+              <div class="field field--row"><div><label for="ph">Phone</label><input id="ph" name="phone" type="tel"></div><div><label for="pc">Preferred contact</label><select id="pc" name="contactMethod"><option value="email">Email</option><option value="phone">Phone</option><option value="text">Text</option></select></div></div>
+            </div>
+            <div class="form-step" data-step="2">
+              <h2 class="form-step__title">Project location</h2>
+              <p class="form-step__sub">We work in Boise and the Treasure Valley.</p>
+              <div class="field"><label for="ad">Project address</label><input id="ad" name="address" type="text" placeholder="Street address"></div>
+              <div class="field field--row"><div><label for="ci">City</label><input id="ci" name="city" type="text" placeholder="Boise, Eagle, Meridian"></div><div><label for="zp">ZIP</label><input id="zp" name="zip" type="text" maxlength="10"></div></div>
+              <div class="field"><label for="sa">Within Boise / Treasure Valley?</label><select id="sa" name="serviceArea"><option value="yes">Yes, within the area</option><option value="nearby">Nearby, checking fit</option><option value="unsure">Not sure</option></select></div>
+            </div>
+            <div class="form-step" data-step="3">
+              <h2 class="form-step__title">Project type</h2>
+              <p class="form-step__sub">Pick the closest match. You can say more next.</p>
+              <div class="radio-grid" role="radiogroup" aria-label="Project type">
+                <label class="radio-card"><input type="radio" name="projectType" value="kitchen"><div class="radio-card__t">Kitchen</div><div class="radio-card__d">Full or partial kitchen</div></label>
+                <label class="radio-card"><input type="radio" name="projectType" value="bath"><div class="radio-card__t">Bathroom</div><div class="radio-card__d">Primary, guest, or powder</div></label>
+                <label class="radio-card"><input type="radio" name="projectType" value="whole"><div class="radio-card__t">Whole-home</div><div class="radio-card__d">Multi-room or full floor</div></label>
+                <label class="radio-card"><input type="radio" name="projectType" value="interior"><div class="radio-card__t">Interior upgrade</div><div class="radio-card__d">Built-ins, millwork</div></label>
+                <label class="radio-card"><input type="radio" name="projectType" value="finishes"><div class="radio-card__t">Finish upgrade</div><div class="radio-card__d">Stone, lighting, hardware</div></label>
+                <label class="radio-card"><input type="radio" name="projectType" value="other"><div class="radio-card__t">Not sure yet</div><div class="radio-card__d">Tell us more next</div></label>
+              </div>
+            </div>
+            <div class="form-step" data-step="4">
+              <h2 class="form-step__title">Project details</h2>
+              <p class="form-step__sub">What are you hoping to do? What is and is not working now?</p>
+              <div class="field"><label for="ds">Tell us about it</label><textarea id="ds" name="description" placeholder="Goals, problems with the current space, must-haves"></textarea></div>
+              <div class="field"><label for="dst">Design status</label><select id="dst" name="designStatus"><option value="none">No plans yet</option><option value="inspo">Inspiration only</option><option value="designer">Designer involved</option><option value="architect">Architect involved</option><option value="plans">Plans complete</option></select></div>
+              <div class="field"><label for="im">Inspiration or project photos (optional)</label><label for="im" class="upload"><div class="upload__t">Drop images, or browse</div><div class="upload__d">JPG, PNG, HEIC &middot; up to 5 files</div><input id="im" name="images" type="file" multiple accept="image/*" style="display:none"></label></div>
+            </div>
+            <div class="form-step" data-step="5">
+              <h2 class="form-step__title">Budget and timing</h2>
+              <p class="form-step__sub">Helps us understand fit. Ranges are a starting point.</p>
+              <div class="field"><label for="bg">Anticipated investment</label><select id="bg" name="budget"><option value="">Select a range</option><option>Under $50,000</option><option>$50,000 to $100,000</option><option>$100,000 to $250,000</option><option>$250,000 to $500,000</option><option>$500,000+</option><option>Not yet sure</option></select></div>
+              <div class="field"><label for="tm">Desired start</label><select id="tm" name="timing"><option value="">Select timing</option><option>As soon as possible</option><option>Within 3 months</option><option>3 to 6 months</option><option>6 to 12 months</option><option>Just gathering info</option></select></div>
+              <div class="field"><label for="ur">Anything time-sensitive?</label><input id="ur" name="urgency" type="text" placeholder="Move-in date, event, family timeline"></div>
+            </div>
+            <div class="form-step" data-step="6">
+              <h2 class="form-step__title">Review and send</h2>
+              <p class="form-step__sub">A quick summary. Use Back to edit any section.</p>
+              <div id="reviewBox" style="background:#fff;border:1px solid var(--c-rule);padding:22px;font-family:var(--ff-sans);font-size:0.9rem;line-height:1.7;color:var(--c-ink-soft)"></div>
+              <div class="consent"><input id="cn" type="checkbox"><label for="cn">I agree to be contacted by Spectral Renovation &amp; Design about my project and have read the <a href="/privacy">privacy policy</a>.</label></div>
+            </div>
+            <div id="formError" style="display:none;margin-bottom:18px;padding:14px 16px;border:1px solid #a44a3f;color:#a44a3f;font-family:var(--ff-sans);font-size:0.9rem">Something went wrong sending your inquiry. Please email info@spectralrenovationdesign.com or call 925-681-8501.</div>
+            <div class="form-nav">
+              <button type="button" class="btn-quiet" id="fBack" style="visibility:hidden">&larr; Back</button>
+              <button type="button" class="btn-solid" id="fNext">Next <span>&rarr;</span></button>
+              <button type="submit" class="btn-solid" id="fSend" style="display:none">Send inquiry <span>&rarr;</span></button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" style="display:none">
+            <div class="thanks__mark">&checkmark;</div>
+            <h3>Thank you. Your inquiry is in.</h3>
+            <p>We will review fit, budget, and availability, and the owner will reach out within one business day.</p>
+          </div>
+        </div>
+        <aside class="contact-aside">
+          <div class="contact-block"><hr class="rule-gold" style="display:none"><h5>Direct contact</h5><p><a href="mailto:info@spectralrenovationdesign.com">info@spectralrenovationdesign.com</a></p><span class="small">We reply within one business day</span></div>
+          <div class="contact-block"><h5>Phone</h5><p><a href="tel:+19256818501">925-681-8501</a></p><span class="small">Monday to Friday, business hours</span></div>
+          <div class="contact-block"><h5>Service area</h5><p>Boise &amp; the Treasure Valley</p><span class="small">Eagle, Meridian, and nearby</span></div>
+          <div class="contact-block"><h5>Follow</h5><p><a href="https://instagram.com/spectralrenovationdesign" target="_blank" rel="noopener noreferrer">@spectralrenovationdesign</a></p><span class="small">Recent work and process</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" alt="Spectral Renovation and Design" src="/assets/images/logo.png">
+        <p class="footer-bio">A small renovation studio in Boise, working across the Treasure Valley.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><ul><li><a href="/services">Services</a></li><li><a href="/portfolio">Work</a></li><li><a href="/process">Process</a></li><li><a href="/about">About</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><a href="/contact">Schedule a consultation</a></li><li><a href="mailto:info@spectralrenovationdesign.com">info@spectralrenovationdesign.com</a></li><li><a href="tel:+19256818501">925-681-8501</a></li><li><a href="https://instagram.com/spectralrenovationdesign" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul></div>
+      <div class="footer-col"><h5>Service area</h5><ul><li>Boise, ID</li><li>Eagle, ID</li><li>Meridian, ID</li><li>Treasure Valley</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Spectral Renovation &amp; Design</div>
+      <div class="footer-bottom__links"><a href="/privacy">Privacy Policy</a><a href="/contact">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
