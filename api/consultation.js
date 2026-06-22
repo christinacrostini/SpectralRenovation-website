@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
   // Until the domain is verified in Resend, use the test sender below.
   // After verifying spectralrenovationdesign.com, set LEAD_FROM to e.g.
   // "Spectral Website <leads@spectralrenovationdesign.com>".
-  const FROM = process.env.LEAD_FROM || "Spectral Website <onboarding@resend.dev>";
+  const FROM = process.env.LEAD_FROM || "Spectral Website <website@spectralrenovationdesign.com>";
   const TO = process.env.LEAD_TO || "info@spectralrenovationdesign.com";
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
