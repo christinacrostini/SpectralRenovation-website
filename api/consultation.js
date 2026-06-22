@@ -39,6 +39,17 @@ module.exports = async (req, res) => {
     `<tr><td style="padding:6px 14px 6px 0;color:#6e6a62;font:13px Arial;white-space:nowrap;vertical-align:top">${label}</td>` +
     `<td style="padding:6px 0;font:13px Arial;color:#1a1a1a">${esc(v) || "(none)"}</td></tr>`;
 
+  // Optional photo attachments (base64 from the browser, already downsized).
+  var attachments = [];
+  if (Array.isArray(data.attachments)) {
+    attachments = data.attachments.slice(0, 5).map(function (a, i) {
+      return {
+        filename: (a && a.filename) ? String(a.filename).slice(0, 80) : "photo-" + (i + 1) + ".jpg",
+        content: Buffer.from(String(a && a.content ? a.content : ""), "base64"),
+      };
+    }).filter(function (a) { return a.content && a.content.length > 0; });
+  }
+
   const name = `${data.firstName || ""} ${data.lastName || ""}`.trim();
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:580px">
@@ -62,13 +73,15 @@ module.exports = async (req, res) => {
     </div>`;
 
   try {
-    await resend.emails.send({
+    const payload = {
       from: FROM,
       to: [TO],
       replyTo: data.email,
       subject: `New consultation request from ${name || "a homeowner"}`,
       html,
-    });
+    };
+    if (attachments.length) payload.attachments = attachments;
+    await resend.emails.send(payload);
 
     // OPTIONAL phase-two: auto-reply to the prospect. Requires a verified
     // sending domain. Uncomment after LEAD_FROM is on a verified domain.
